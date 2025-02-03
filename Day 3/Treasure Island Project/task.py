@@ -1,4 +1,4 @@
-print(r'''
+print('''
 *******************************************************************************
           |                   |                  |                     |
  _________|________________.=""_;=.______________|_____________________|_______
@@ -22,3 +22,171 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ''')
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
+print("You're at a crossroad. Where do you want to go?")
+print('''
+_.-"/______________________/////            \\\\\\\\\_____________________\"-._
+`'-.\~~~~~~~~~~~~~~~~~~~~~~\\\\\\\\\            /////~~~~~~~~~~~~~~~~~~~~~/.-'
+''')
+first_choice = input("Pick 'left' or 'right'. ").lower()
+print(first_choice)
+if first_choice == "left":
+    print("Good thing you didn't go off that cliff!\n You have arrived at a lake. You see something some cabins across the way. "
+                          "Do you choose to swim across or wait for a boat?")
+    print('''
+                        .-"""-.                                                 _
+                       /       \                                               /|\ 
+                      ;_.-"""-._;                                             /_|_\ 
+   .,_       __,.---.-(=(o)-(o)=)-.---.,__       _,.                        ____|____
+   '._'--"```          \   ^   /          ```"--'_.'                        \_o_o_o_/
+      ``"''~---~~%^%^.%.`._0_.'%,^%^%^~~---~''"``                          ~~ |     ~~~~~
+      ~^~- `^-% ^~.%~%.^~-%-~.%-^.% ~`% ~-`%^`-~^~                         ___t_________ 
+         ~^- ~^- `~.^- %`~.%~-'%~^- %~^- ~^
+    ''')
+    second_choice = input("Pick 'swim' or 'wait'. ").lower()
+    print(second_choice)
+    if second_choice == "wait" or second_choice == "boat":
+        print("You waited patiently and were rewarded with a boat to take you across the alligator infested lake!\n"
+              "There are three cabins on the shore. One has a red door, one has a yellow door, and one has a blue door.")
+        print('''
+         ^  ^  ^   ^      ___I_      ___I_       ___I_      ^  ^   ^  ^  ^   ^  ^
+        /|\/|\/|\ /|\    /\-_--\    /\-_--\     /\-_--\    /|\/|\ /|\/|\/|\ /|\/|\ 
+        /|\/|\/|\ /|\   /  \_-__\  /  \_-__\   /  \_-__\   /|\/|\ /|\/|\/|\ /|\/|\ 
+        /|\/|\/|\ /|\   |[]| [] |  |[]| [] |   |[]| [] |   /|\/|\ /|\/|\/|\ /|\/|\ 
+        ''')
+        third_choice = input("Pick which color door you think is the cabin containing the treasure.\n 'Red', 'yellow' or 'blue'. ").lower()
+        print(third_choice)
+        if third_choice == "red":
+            print('''
+                                  ooO
+                                 ooOOOo
+                               oOOOOOOoooo
+                             ooOOOooo  oooo
+                            /vvv\ 
+                           /V V V\ 
+                          /V  V  V\          
+                         /         \          
+                        /           \               
+                      /               \ 
+            __       /                 \     
+            /\     /                     \                                         
+            ''')
+            print("You walk into the cabin with the red door and are transported inside a volcano! Game over")
+        elif third_choice == "yellow":
+            print('''                                                              
+                                                                                   ,d     
+                                                                                   88     
+             ,adPPYba,  ,adPPYba,  8b,dPPYba,   ,adPPYb,d8 8b,dPPYba, ,adPPYYba, MM88MMM   ,adPPYba,  
+            a8"     "" a8"     "8a 88P'   `"8a a8"    `Y88 88P'   "Y8 ""     `Y8   88      I8[    "" 
+            8b         8b       d8 88       88 8b       88 88         ,adPPPPP88   88       `"Y8ba,
+            "8a,   ,aa "8a,   ,a8" 88       88 "8a,   ,d88 88         88,    ,88   88,      aa    ]8I 
+             `"Ybbd8"'  `"YbbdP"'  88       88  `"YbbdP"Y8 88         `"8bbdP"Y8   "Y888    `"YbbdP"' 
+                                                aa,    ,88                                
+                                                 "Y8bbdP"                                
+            ''')
+            print("You walk into the cabin with the yellow door and see all the treasure you could hope for! You win!!")
+        elif third_choice == "blue":
+            print('''
+                     .               `         /
+                                      .    ,../...       .
+                      .                .  /       `\  /  .
+                 \    .        o         < '  )     =<
+                 /\  .                    \ \      /  \   .  __
+               >=)'>                       `'\ "'"'         /o \/
+                 \/ .    /         o              /,        \__/\    .:/
+                 /   .  /--\ /         /         <')=<     .      ,,///;,   ,;/
+                       ::::::::;;\\\ 
+                         \            \_/            .            ''\\\\\'' ';\ 
+                (                      \              .   __
+                 )                                       <'_><          (
+                (          (                ,/..          `              )
+                 )     (    )             <')   `=<                )    (
+                (       )  (               ``\```                 (      )
+            _____)_____(____)______________________________________)____(___________
+            ''')
+            print("You walk into the cabin with the blue door and are transported the middle of the sea! Game over")
+        else:
+            print('''
+             .. ........... .............  ........... . ..... ........ .......
+             ......  ....................%.... .... ..... .........%............
+             .@@@ ........ @@.... @@@@  . ............................  *  .....
+             ....@@ ..... @ .... @ .............   ....... .....; .... *** .....
+             .....\@\....@ .... @ ............................. #  .. *****  ...
+              @@@.. @@@@@  @@@@@@___.. ....... ...%..... ...  {###}  *******
+             ....@-@..@ ..@......@@@\...... %...... ....... <## ####>********
+               @@@@\...@ @ ........\@@@@ ..... ...... ....... {###}***********
+             ....%..@  @@ /@@@@@ . ....... ...............<###########> *******
+             ...... .@-@@@@ ...V......     .... %.......... {#######}******* ***
+             ...... .  @@ .. ..v.. .. . { } ............<###############>*******
+             ......... @@ .... ........ {^^,     .......   {## ######}***** ****
+             ..%..... @@ .. .%.... . .. (   `-;   ... <###################> ****
+             . .... . @@ . .... .. _  .. `;;~~ ......... {#############}********
+             .... ... @@ ... ..   /(______); .. ....<################  #####>***
+             . .... ..@@@ ...... (         (  .........{##################}*****
+             ......... @@@  ....  |:------( )  .. <##########################>**
+              @@@@ ....@@@  ... _// ...... \\ ...... {###   ##############}*****
+             @@@@@@@  @@@@@ .. / /@@@@@@@@@ vv  <##############################>
+             @@@@@@@ @@@@@@@ @@@@@@@@@@@@@@@@@@@ ..... @@@@@@  @@@@@@@  @@@@
+             @@@@@@###@@@@@### @@@@@@@@@@@@@@@@@@ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+             @@@@@@@@###@##@@ @@@@@@@@@@@@@@@@@@@@@ @@@@@   @@@@@@@@@@@@@@@@@@@
+             @@@@@@@@@@@### @@@@@@@@@@@@@@@@@@@@@@@@@@ @@@@@@@@@@@@@@@@@@@@@@@@
+             -@@@@@@@@@#####@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            ''')
+            print("You wander off into the woods and are never seen or heard from again! Game over")
+    elif second_choice == "swim":
+        print('''
+                ('(
+                  \ \                    " Help !!!   Alligators...."
+               d@b | |
+               @@@@' |
+           ('(  Y@P   `--..
+            \ `--'      .' `.
+             `---....__/    |
+                       /   . \                     /^^^^\ 
+                     /  .'\  \       /^^\________/0      \ 
+                      \  \  \  \     (                    `~+++,,_____,,++~^^^^^^^
+                       \  \  \__\  ...V^V^V^V^V^V^\...............................
+                       _`--` `--'     
+                      `---'
+        ''')
+        print("You attempted to swim across the alligator infested lake and the gators chomped on you! Game over")
+    else:
+        print("Instead of going across the lake, you decide to take a nap and fall asleep!\n No treasure was found in your dreams. Game over")
+        print('''
+                                z
+                             z
+                              Z
+                    .--.  Z Z
+                   / _(c\   .-.     __
+                  | / /  '-;   \'-'`  `\______
+                  \_\/'/ __/ )  /  )   |      \--,
+                  | \`""`__-/ .'--/   /--------\  \ 
+                   \\`  ///-\/   /   /---;-.    '-'
+                                    (________\  \ 
+                                          '-'
+        ''')
+elif first_choice == "right":
+    print('''
+                     |
+              _,  iO_|
+             /_ \_|  /
+               )     '-,
+              | ._.-: (`;
+               \|   //
+           _.-'```"""``"-._
+        /"`                '.
+        `':.,_               "._
+             \`'-._             `'-._
+              \    `:._              `'-._          _
+              |      \ `:_                `"--"--"``
+              |       \   `:_
+              |      :|    \ '.
+              |       |     |  `:_
+              |       |:    |     `:_
+              |:      |     |
+              |       |
+              |
+              |
+    ''')
+    print("You took the path less travelled, right off a cliff. Game over")
+else:
+    print("Guess you're not in the mode for a treasure hunt today. Goodbye!")
