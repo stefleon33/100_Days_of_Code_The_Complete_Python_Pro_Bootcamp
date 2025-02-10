@@ -17,3 +17,29 @@ def greet_with(name, location):
 
 #Keyword Arguments
 greet_with(location = "London", name = "Jack Bauer")
+
+def calculate_love_score(name1, name2):
+    combined_names = name1 + name2
+    true_count = 0
+    love_count = 0
+    for char in combined_names:
+        if char.lower() == 't':
+            true_count += 1
+        if char.lower() == 'r':
+            true_count += 1
+        if char.lower() == 'u':
+            true_count += 1
+        if char.lower() == 'e':
+            true_count += 1
+    for char in combined_names:
+        if char.lower() == 'l':
+            love_count += 1
+        if char.lower() == 'o':
+            love_count += 1
+        if char.lower() == 'v':
+            love_count += 1
+        if char.lower() == 'e':
+            love_count += 1
+    print(str(true_count) + str(love_count))
+
+calculate_love_score(name1="Kanye West", name2="Kim Kardashian")
