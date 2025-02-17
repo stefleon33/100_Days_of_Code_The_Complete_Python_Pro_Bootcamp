@@ -13,7 +13,6 @@ def divide(n1, n2):
     return n1 / n2
 def exponent(n1, n2):
     return n1 ** n2
-
 operations = {
     "+" : add,
     "-" : subtract,
@@ -22,6 +21,7 @@ operations = {
     "**" : exponent,
 }
 def get_valid_float(prompt):
+    """Checks if the input is a valid float"""
     while True:
         try:
             return float(input(prompt))
@@ -31,6 +31,7 @@ def get_valid_float(prompt):
 def calculator():
     keep_calculating = True
     print(logo)
+    """Get num1 outside while loop so if user continues, the previous solution is used as num1"""
     num1 = get_valid_float("Enter the first number: ")
 
     while keep_calculating:
@@ -47,7 +48,7 @@ def calculator():
             keep_calculating = False
             print("\n" * 20)
             calculator()
-
+        """Ask user if they want to continue with previous result. If not, restart calculator."""
         go_again = input(f"Do you want to continue with the previous result of {solution}? \n" 
                             "Type 'y' for yes and 'n' for no. \n").lower()
         if go_again == 'y':
