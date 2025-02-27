@@ -8,7 +8,7 @@ print("I'm thinking of a number between 1 and 100.")
 
 """Computer chooses a number"""
 chosen_number = randint(1, 100)
-print(f"The number to guess is {chosen_number}.")
+#print(f"The number to guess is {chosen_number}.")
 
 game = True
 attempts = 0
