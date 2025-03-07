@@ -17,6 +17,10 @@ print(f"Against B: {data[1]['name']},")
 guess = input("Who has more followers? Type 'A' or 'B': ").lower()
 
 # TODO: Compare number of followers using data
+follower_count_a = option_a['follower_count']
+follower_count_b = option_b['follower_count']
+print(follower_count_a)
+print(follower_count_b)
 
 # TODO: User correct, tell them their current score, move Choice B to Choice A and restart
 
