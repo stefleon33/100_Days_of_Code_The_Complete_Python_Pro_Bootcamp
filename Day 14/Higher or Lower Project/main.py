@@ -3,6 +3,9 @@ from art import logo, vs
 from game_data import data
 
 print(logo)
+score = 0
+game_should_continue = True
+option_b = random.choice(data)
 
 option_a = ''
 option_b = ''
