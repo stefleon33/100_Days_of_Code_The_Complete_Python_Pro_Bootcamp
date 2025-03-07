@@ -2,13 +2,17 @@ import random
 from art import logo, vs
 from game_data import data
 
+"""Display art"""
 print(logo)
 score = 0
 game_should_continue = True
+
+"""Generate a random account from the game data"""
 option_b = random.choice(data)
 
 while game_should_continue is True:
     # TODO: Call Choices and have Choice A set to Choice B and Choice B chosen again
+    """Set option A to be option B and if the options are the same, call a new option B"""
     option_a = option_b
     option_b = random.choice(data)
     if option_a == option_b:
@@ -18,40 +22,37 @@ while game_should_continue is True:
     follower_count_a = option_a['follower_count']
     follower_count_b = option_b['follower_count']
 
-# TODO: Call Choices: Display name, description and location
+    # TODO: Call Choices: Display name, description and location
+    """Format the account data into printable format"""
+    print(f"Compare A: {option_a['name']}, a(n) {option_a['description']}, from {option_a['country']}.")
+    print(vs)
+    print(f"Against B: {option_b['name']}, a(n) {option_b['description']}, from {option_b['country']}.")
 
-print(f"Compare A: {data[0]['name']},")
+    """Follower counts printed during testing"""
+    #print(follower_count_a)
+    #print(follower_count_b)
 
-print(vs)
-print(f"Against B: {data[1]['name']},")
+    # TODO: Ask player to select who has more followers
+    ask_question = input("Who has more followers? Type 'A' or 'B': ").upper()
 
-# TODO: Ask player to select who has more followers
-guess = input("Who has more followers? Type 'A' or 'B': ").lower()
-
-# TODO: Compare number of followers using data
-follower_count_a = option_a['follower_count']
-follower_count_b = option_b['follower_count']
-print(follower_count_a)
-print(follower_count_b)
-
-# TODO: User correct, tell them their current score, move Choice B to Choice A and restart
-
-# TODO: User incorrect, end game and tell them their score.
-# TODO: User correct, tell them their current score, move Choice B to Choice A and restart
-def game():
-    while True:
-        ask_question = input("Who has more followers? Type 'A' or 'B': ").upper()
-        score = 0
-
-        if follower_count_a > follower_count_b and ask_question == 'A':
-            score += 1
-            print(f"You're right! Current Score: {score}")
-
-        elif follower_count_a < follower_count_b and ask_question == 'B':
-            score += 1
-            print(f"You're right! Current Score: {score}")
-        else:
-            print(f"You're incorrect. Final Score: {score}")
-            return False
-
-game()
+    # TODO: User correct, tell them their current score, move Choice B to Choice A and restart
+    """If the user is right, the game should continue with their score increasing and Option A becoming Option B."""
+    # TODO: User incorrect, end game and tell them their score.
+    """If the user is wrong, the game should end and their final score should be displayed."""
+    if follower_count_a > follower_count_b and ask_question == 'A':
+        score += 1
+        print("\n"*20)
+        print(logo)
+        print(f"You're right! Current Score: {score}")
+        option_a = option_b
+    elif follower_count_a < follower_count_b and ask_question == 'B':
+        score += 1
+        print("\n" * 20)
+        print(logo)
+        print(f"You're right! Current Score: {score}")
+        option_a = option_b
+    else:
+        print("\n" * 20)
+        print(logo)
+        print(f"Sorry, you're wrong. Final Score: {score}")
+        game_should_continue = False
