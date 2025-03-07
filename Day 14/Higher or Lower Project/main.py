@@ -33,19 +33,19 @@ while game_should_continue is True:
     #print(follower_count_b)
 
     # TODO: Ask player to select who has more followers
-    ask_question = input("Who has more followers? Type 'A' or 'B': ").upper()
+    guess = input("Who has more followers? Type 'A' or 'B': ").upper()
 
     # TODO: User correct, tell them their current score, move Choice B to Choice A and restart
     """If the user is right, the game should continue with their score increasing and Option A becoming Option B."""
     # TODO: User incorrect, end game and tell them their score.
     """If the user is wrong, the game should end and their final score should be displayed."""
-    if follower_count_a > follower_count_b and ask_question == 'A':
+    if follower_count_a > follower_count_b and guess == 'A':
         score += 1
         print("\n"*20)
         print(logo)
         print(f"You're right! Current Score: {score}")
         option_a = option_b
-    elif follower_count_a < follower_count_b and ask_question == 'B':
+    elif follower_count_a < follower_count_b and guess == 'B':
         score += 1
         print("\n" * 20)
         print(logo)
