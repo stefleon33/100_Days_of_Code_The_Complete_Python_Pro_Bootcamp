@@ -7,8 +7,16 @@ score = 0
 game_should_continue = True
 option_b = random.choice(data)
 
-option_a = ''
-option_b = ''
+while game_should_continue is True:
+    # TODO: Call Choices and have Choice A set to Choice B and Choice B chosen again
+    option_a = option_b
+    option_b = random.choice(data)
+    if option_a == option_b:
+        option_b = random.choice(data)
+
+    # TODO: Call number of followers from data import
+    follower_count_a = option_a['follower_count']
+    follower_count_b = option_b['follower_count']
 
 # TODO: Call Choices: Display name, description and location
 
